@@ -9,7 +9,7 @@ I took this [design](https://www.figma.com/proto/DmxA6mUgZJts6T8pJ01qww/Project-
 
 ## Contributing
 Just me.
-- StevenACZ ;)
+- YFCR
 
 ## License
 FREE
