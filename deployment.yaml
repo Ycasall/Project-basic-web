@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app-deployment  # Nombre del Deployment (puedes cambiarlo)
+  name: web-app-deployment  # Nombre del Deployment
 spec:
   replicas: 1  # Número de réplicas del pod
   selector:
@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: web-app  # Nombre del contenedor
-          image: web-app:latest  # La imagen Docker que creaste (en este caso 'web-app', que es la etiqueta que usaste al construirla)
+          image: efreway/my-web-app:latest  # Imagen en Docker Hub
           ports:
             - containerPort: 80  # Puerto en el que el contenedor va a escuchar (para Nginx, típicamente es el puerto 80)
           resources:
             limits:
-              memory: "512Mi"  # Límite de memoria (puedes ajustarlo según lo que necesites)
-              cpu: "500m"  # Límite de CPU (puedes ajustarlo también)
+              memory: "512Mi"  # Límite de memoria
+              cpu: "500m"  # Límite de CPU
           securityContext:
             privileged: false  # No estamos usando privilegios elevados
